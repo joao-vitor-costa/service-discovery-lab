@@ -1,0 +1,15 @@
+server:
+  port: ${SERVER_PORT:8081}
+service:
+  discovery:
+    service-name: ${SERVICE_NAME:payment-service}
+    instance-id: ${INSTANCE_ID:${SERVICE_NAME:payment-service}-${SERVER_PORT:8081}}
+    host: ${SERVICE_HOST:localhost}
+    port: ${SERVER_PORT:8081}
+    registry-url: ${REGISTRY_URL:http://localhost:8761}
+    heartbeat-interval: ${HEARTBEAT_INTERVAL:3s}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics

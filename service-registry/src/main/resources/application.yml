@@ -1,0 +1,11 @@
+server:
+  port: ${SERVER_PORT:8761}
+service:
+  registry:
+    instance-ttl: ${INSTANCE_TTL:10s}
+    expiration-check-interval: ${EXPIRATION_CHECK_INTERVAL:2000}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics

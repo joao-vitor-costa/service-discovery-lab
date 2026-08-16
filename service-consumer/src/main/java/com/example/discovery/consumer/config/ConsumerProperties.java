@@ -1,0 +1,1 @@
+package com.example.discovery.consumer.config;import org.springframework.boot.context.properties.ConfigurationProperties;@ConfigurationProperties(prefix="service.consumer") public record ConsumerProperties(String serviceName,String registryUrl){public ConsumerProperties{if(serviceName==null)serviceName="payment-service"; if(registryUrl==null)registryUrl="http://localhost:8761";}}

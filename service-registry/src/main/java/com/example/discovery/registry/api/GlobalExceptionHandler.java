@@ -1,0 +1,2 @@
+package com.example.discovery.registry.api;import java.util.Map;import org.springframework.http.*;import org.springframework.web.bind.annotation.*;
+@RestControllerAdvice public class GlobalExceptionHandler{@ExceptionHandler(IllegalArgumentException.class) ResponseEntity<Map<String,String>> bad(IllegalArgumentException ex){return ResponseEntity.badRequest().body(Map.of("error","INVALID_REQUEST","message",ex.getMessage()));}}
