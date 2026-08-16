@@ -1,0 +1,1 @@
+package com.example.discovery.consumer.model;public record ServiceInstance(String serviceName,String instanceId,String host,int port,String healthUrl,String registeredAt,String lastHeartbeat,String status){public String baseUrl(){return "http://"+host+":"+port;}}

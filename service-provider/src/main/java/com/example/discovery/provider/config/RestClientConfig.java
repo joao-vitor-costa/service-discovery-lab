@@ -1,0 +1,1 @@
+package com.example.discovery.provider.config;import org.springframework.context.annotation.*;import org.springframework.web.client.RestClient;@Configuration class RestClientConfig{@Bean RestClient restClient(RestClient.Builder builder){return builder.build();}}
